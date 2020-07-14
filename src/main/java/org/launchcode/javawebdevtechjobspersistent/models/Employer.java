@@ -14,7 +14,7 @@ public class Employer extends AbstractEntity {
     @JoinColumn
     private List<Job> jobs = new ArrayList<>();
 
-    @NotBlank
+    @NotBlank(message = "Location is required.")
     private String location;
 
     public Employer(String location) {
